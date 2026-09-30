@@ -1,0 +1,53 @@
+# Quartus generated
+db/
+incremental_db/
+output_files/
+simulation/
+greybox_tmp/
+*.qws
+*.rpt
+*.summary
+*.smsg
+*.done
+*.jdi
+*.pin
+*.sld
+*.qarlog
+*.cdf
+*.ipinfo
+*.sopcinfo
+*.html
+*.bak
+c5_pin_model_dump.txt
+
+# Programming files (attach to GitHub Releases instead)
+*.sof
+*.pof
+*.jic
+*.rbf
+
+# Platform Designer / IP generated output
+qsys/*/synthesis/
+qsys/*/simulation/
+.qsys_edit/
+
+# Simulation (Verilator / ModelSim)
+obj_dir/
+work/
+*.vcd
+*.fst
+*.wlf
+transcript
+vsim.wlf
+
+# Software build outputs
+*.elf
+*.o
+*.hex
+build/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
