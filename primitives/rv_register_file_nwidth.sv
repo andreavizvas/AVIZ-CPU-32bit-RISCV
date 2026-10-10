@@ -22,7 +22,7 @@ module rv_register_file_nwidth #(
     output logic [REG_WIDTH-1:0]  READ_DATA2
 );
     logic [REG_WIDTH-1:0] REGISTERS [0:NUM_REG-1];  // width of each register, no. of registers in array
-
+    
 // synchronous write port
 always_ff @(posedge CLK or posedge RESET) begin
     if (WRITE_EN && (WRITE_ADDR != '0)) begin
