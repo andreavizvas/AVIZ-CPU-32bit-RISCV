@@ -3,7 +3,8 @@
 // Description: N-width Program Counter (RISC-V), for 32-bit CPU and other projects. 
 // Loads next program 'NEXT_PC' on a rising clock edge when 'ENABLE' is true
 
-// DESIGNER: ANDRE AVIZ VASCONCELOS, Fri August 21 2026, 00:32:03, Gainesville FL, United States
+// DESIGNER: ANDRE AVIZ VASCONCELOS, Fri August 21 2026, 00:32:03, 
+// Gainesville FL, United States
 
 module program_counter #(
     parameter WIDTH = 32

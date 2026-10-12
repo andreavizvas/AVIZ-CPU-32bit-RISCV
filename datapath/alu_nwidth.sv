@@ -5,7 +5,6 @@
 // DESIGNER: ANDRE AVIZ VASCONCELOS, Sun August 16 2026, 00:30:44, 
 // Shoal Bay East, Anguilla	
 
-
 module alu_nwidth #(
     parameter WIDTH = 32
 )(
