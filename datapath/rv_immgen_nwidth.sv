@@ -7,7 +7,7 @@
 // DESIGNER: ANDRE AVIZ VASCONCELOS, Tue August 25 2026, 13:03:13, 
 // Gainesville FL, United States
 
-module immgen_XLEN #(
+module immgen_nwidth #(
     parameter XLEN = 32
 )(
     input  logic [31:0] INSTR,
@@ -40,16 +40,16 @@ always_comb begin
         end
     // load upper immediate
         IMM_U: begin
-            IMM = {{(XLEN-32)INSTR[31:12]}, 12'b0};
+            IMM = {{(XLEN-32){INSTR[31]}}, INSTR[31:12], 12'b0};
         end
     // jump unconditional
         IMM_J: begin
             IMM = {{(XLEN-21){INSTR[31]}}, INSTR[31], INSTR[19:12], INSTR[20], INSTR[30:21], 1'b0};
         end
-    endcase
 
-    default: begin
-        IMM = '0;
-    end
+        default: begin
+            IMM = '0;
+        end
+    endcase
 end
 endmodule
