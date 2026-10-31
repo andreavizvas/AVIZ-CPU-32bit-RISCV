@@ -54,17 +54,17 @@ module rv_branch_comparator_tb;
 
   // TEST 1
   task automatic check_branch(
-        input logic [XLEN-1:0] A,
-        input logic [XLEN-1:0] B,
-        input logic [2:0]      BRANCH_SEL,
+        input logic [XLEN-1:0] a_value,
+        input logic [XLEN-1:0] b_value,
+        input logic [2:0]      selector,
         input logic            expected
     );
-        A          = A;
-        B          = B;
-        BRANCH_SEL = BRANCH_SEL;
+        A          = a_value;
+        B          = b_value;
+        BRANCH_SEL = selector;
 
-  #1;  // Allow comb. logic to "settle"
-        tests++;
+#1;  // Allow comb. logic to "settle"
+tests++;
 
         // Case inequality to detect unexpected outputs
         if (BRANCH !== expected) begin
