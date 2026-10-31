@@ -9,7 +9,7 @@ Description: Testbench for 'rv_branch_comparator.sv'
 module rv_branch_comparator_tb;
 
   // Parameters
-  localparam int WIDTH = 32;
+  localparam int XLEN = 32;
   localparam time TIMEOUT = 1ms;
 
   localparam logic [2:0]
@@ -21,12 +21,6 @@ module rv_branch_comparator_tb;
         BGEU = 3'b111;      // branch if greater than or equal (unsigned)
 
   // Signals
-  logic clk = 0;
-  logic clkEn = 1;
-  logic rst = 1;
-  logic go = 0;
-  logic done;
-
   logic [XLEN-1:0] A;
   logic [XLEN-1:0] B;
   logic [2:0] BRANCH_SEL;
@@ -49,7 +43,7 @@ module rv_branch_comparator_tb;
 // *********************************** DUT ***********************************
   rv_branch_comparator_nwidth #(
     // .submodule(PARENT)
-    .XLEN(WIDTH)
+    .XLEN(XLEN)
   ) DUT (
     .A(A),
     .B(B),
