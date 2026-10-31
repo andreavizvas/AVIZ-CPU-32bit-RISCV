@@ -36,7 +36,7 @@ module rv_branch_comparator_tb;
 
   int unsigned tests  = 0;
   int unsigned errors = 0;
-  
+
 
 // *********************************** DUT ***********************************
   rv_branch_comparator_nwidth #(
@@ -167,13 +167,15 @@ check_branch(32'h80000000, 32'h7FFFFFFF, 3'b011, 1'b0);
 
    // ***************************** FINAL SUMMARY: ****************************
 
-   if (errors == 0)
+    if (errors == 0) begin
         $display("----------------------------------------");
         $display("PASS: all %0d TESTBENCH COMPLETED SUCCESSFULLY", tests);
         $display("FAILED: %0d", errors);
         $display("----------------------------------------");
-    else
+    end
+    else begin
         $fatal(1, "FAIL: %0d FAILURES IN %0d CHECKS", errors, tests);
+    end
 
     $finish;
   end
