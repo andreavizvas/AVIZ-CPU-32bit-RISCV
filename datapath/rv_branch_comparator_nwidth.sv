@@ -35,7 +35,7 @@ module rv_branch_comparator_nwidth # (
             end
 
             BLT: begin
-                BRANCH = ($sugned(A) < $signed(B));
+                BRANCH = ($signed(A) < $signed(B));
             end
 
             BGE: begin
