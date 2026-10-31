@@ -12,9 +12,9 @@ module rv_branch_comparator_nwidth # (
 )(
     input  logic [XLEN-1:0] A,
     input  logic [XLEN-1:0] B,
-    input  logic [2:0]    BRANCH_SEL,
+    input  logic [2:0]      BRANCH_SEL,
     
-    output logic          BRANCH
+    output logic            BRANCH
 );
     localparam logic [2:0]
         BEQ  = 3'b000,      // branch if equal
