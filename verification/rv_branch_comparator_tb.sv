@@ -160,7 +160,6 @@ check_branch(32'h7FFFFFFF, 32'h80000000, BGE, 1'b1);
         therefore, the modules 'default' case returns 0, regardless of inputs
         when BRANCH_SEL = 010, 011; the CPU decoder will decide the instruction
         legality. 
-
 */
 
 check_branch(32'h00000005, 32'h00000005, 3'b010, 1'b0);
