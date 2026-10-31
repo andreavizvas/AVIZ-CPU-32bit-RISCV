@@ -36,9 +36,7 @@ module rv_branch_comparator_tb;
 
   int unsigned tests  = 0;
   int unsigned errors = 0;
-
-  // Clock generation
-  always #20 if (clkEn) clk = ~clk;
+  
 
 // *********************************** DUT ***********************************
   rv_branch_comparator_nwidth #(
